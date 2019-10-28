@@ -3,7 +3,7 @@ package com.beer.dao.list;
 import java.util.List;
 
 import com.beer.vo.list.ListVo;
-
+//test by sj
 public interface ListDao {
 	
 	public int deleteList(String l_category, String s_no, String b_no);
