@@ -1,0 +1,118 @@
+﻿INSERT INTO MEMBER VALUES('m191101001','docgoogle1','tadata222','허민지',to_date(19920907),'1022973228','서울특별시 서초구 효령로 335길 1층','ididid111@gmail.com','학생',100);
+INSERT INTO MEMBER VALUES('m191113002','masterbeer02','sysdate0202','williams',to_date(19910905),'1022929393','서울특별시 동대문구 ','idi222@naver.com','서비스직',200);
+INSERT INTO MEMBER VALUES('m191101003','king_data7','m@kwsght','태국태국',to_date(19610212),'10232132','Mary St, Brisbane, QLD 4000','dodo33@hotmail.com','교육직',300);
+INSERT INTO MEMBER VALUES('m200102004','113mapping','!!!master004','박성민',to_date(20010222),'1022222222','경기도 성남시 판교역로 231','fafaf44@hanmail.com','무직',400);
+INSERT INTO MEMBER VALUES('f201102005','2fo2o2of2dfo1','miam32dgsd','은단오',to_date(19061021),'102239495','서울시 광진구 능동 233','adfasd55@daum.com','IT업계',500);
+INSERT INTO MEMBER VALUES('f190502006','da__3d_dad','youcandoit3','여주다',to_date(19980808),'1044464446','부산광역시 중구 남포동 구덕로 54-1','wsdf66@naver.com','서비스직',100);
+INSERT INTO MEMBER VALUES('m191020001','_ququ555','fafamf33','이루화',to_date(19991010),'1022222222','대구광역시 동구 신청동 193-1','dddd77@gmail.com','학생',200);
+INSERT INTO MEMBER VALUES('m191202002','daodao007','dms2!dksmdf','하루',to_date(20000101),'1088888888','제주도 서귀포시 안덕면 서광리 1791','rgrg88@hanmail.com','서비스직',300);
+INSERT INTO MEMBER VALUES('m191222003','itsverylonglonglong','weskdfj@','오남주',to_date(20000428),'109999999','경기도 수원시 팔달구 경수대로 438','sss99@naver.com','교육직',400);
+INSERT INTO MEMBER VALUES('f191104004','whe','fksgkdsjg','황금독수리',to_date(20000204),'10226222262','경기도 광명시 일직로 17','gmg100@gmail.com','무직',500);
+INSERT INTO MEMBER VALUES('m191027001','dodododo','asdf','박성민',to_date(19900808),'103333333','판교로~','gdododod@gmail.com','학생',100);
+
+
+
+
+
+
+INSERT INTO BRAND VALUES('엔코아','한국');
+INSERT INTO BRAND VALUES('머시기','일본');
+INSERT INTO BRAND VALUES('하이트진로','한국');
+INSERT INTO BRAND VALUES('Magpie Brewing Co.','한국');
+INSERT INTO BRAND VALUES('GUINNESS','아일랜드');
+INSERT INTO BRAND VALUES('Lost Coast','미국');
+INSERT INTO BRAND VALUES('MALTS','일본');
+INSERT INTO BRAND VALUES('아르투아','벨기에');
+
+
+
+
+
+
+INSERT INTO BEER VALUES('b'||lpad(seq_b_no.nextval,4,0),'테라','4.6','Larger',NULL,NULL,'-','맥주사진경로1','엔코아');
+INSERT INTO BEER VALUES('b'||lpad(seq_b_no.nextval,4,0),'하이트','4.5','Larger',NULL,NULL,'-','맥주사진경로2','머시기');
+INSERT INTO BEER VALUES('b'||lpad(seq_b_no.nextval,4,0),'드라이피니시d','4.8','Stout',NULL,NULL,'-','맥주사진경로3','하이트진로');
+INSERT INTO BEER VALUES('b'||lpad(seq_b_no.nextval,4,0),'막차','8.2','Porter',NULL,28,'초콜릿, 스파이시','맥주사진경로4','Magpie Brewing Co.');
+INSERT INTO BEER VALUES('b'||lpad(seq_b_no.nextval,4,0),'기네스','4.2','Weizen',40,45,'커피,다크초콜릿','맥주사진경로5','GUINNESS');
+INSERT INTO BEER VALUES('b'||lpad(seq_b_no.nextval,4,0),'코스트 인디카 IPA','6.5','IPA',11,NULL,'열대과일, 허브','맥주사진경로6','Lost Coast');
+INSERT INTO BEER VALUES('b'||lpad(seq_b_no.nextval,4,0),'산토리 프리미엄','5.5','ALE',NULL,25,'풀,꽃','맥주사진경로7','MALTS');
+INSERT INTO BEER VALUES('b'||lpad(seq_b_no.nextval,4,0),'스텔라','5.2','PaleAle',NULL,NULL,'-','맥주사진경로8','아르투아');
+INSERT INTO BEER VALUES('b'||lpad(seq_b_no.nextval,4,0),'스텔라2','5.2','PaleLager',NULL,NULL,'-','맥주사진경로9','아르투아');
+
+
+
+
+INSERT INTO REVIEW VALUES('r'||lpad(seq_r_no.nextval,4,0),'m191101001','b0001','마싰당');
+INSERT INTO REVIEW VALUES('r'||lpad(seq_r_no.nextval,4,0),'m191113002','b0002','마싯땅');
+INSERT INTO REVIEW VALUES('r'||lpad(seq_r_no.nextval,4,0),'m191101003','b0003','마싯땽');
+INSERT INTO REVIEW VALUES('r'||lpad(seq_r_no.nextval,4,0),'m200102004','b0003','마싯댱');
+INSERT INTO REVIEW VALUES('r'||lpad(seq_r_no.nextval,4,0),'f201102005','b0005','GOOD');
+INSERT INTO REVIEW VALUES('r'||lpad(seq_r_no.nextval,4,0),'f190502006','b0007','GOOOD');
+INSERT INTO REVIEW VALUES('r'||lpad(seq_r_no.nextval,4,0),'m191020001','b0007','GOOOOD');
+INSERT INTO REVIEW VALUES('r'||lpad(seq_r_no.nextval,4,0),'m191202002','b0008','GIIID');
+INSERT INTO REVIEW VALUES('r'||lpad(seq_r_no.nextval,4,0),'m191222003','b0009','GOOD');
+INSERT INTO REVIEW VALUES('r'||lpad(seq_r_no.nextval,4,0),'f191104004','b0004','SDFSDF');
+INSERT INTO REVIEW VALUES('r'||lpad(seq_r_no.nextval,4,0),'m191027001','b0002','SDFSDF');
+
+
+
+
+
+
+INSERT INTO grade VALUES('일반', 0, 100);
+INSERT INTO grade VALUES('브론즈', 101, 200);
+INSERT INTO grade VALUES('마스터', 201, 9999);
+INSERT INTO grade VALUES('관리자', 10000, 100000);
+
+
+
+
+
+
+
+INSERT INTO LIST VALUES('선호','sdocgoogle1','b0001');
+INSERT INTO LIST VALUES('위시','sdocgoogle1','b0002');
+INSERT INTO LIST VALUES('추천','sdocgoogle1','b0003');
+INSERT INTO LIST VALUES('위시','smasterbeer02','b0004');
+INSERT INTO LIST VALUES('선호','sking_data7','b0005');
+INSERT INTO LIST VALUES('위시','s113mapping','b0006');
+INSERT INTO LIST VALUES('선호','s_ququ555','b0007');
+INSERT INTO LIST VALUES('위시','sdaodao007','b0008');
+INSERT INTO LIST VALUES('선호','sitsverylonglonglong','b0009');
+INSERT INTO LIST VALUES('위시','sdaodao007','b0001');
+
+
+
+
+
+
+
+INSERT INTO QnA(q_no, s_no, question) VALUES('q'||lpad(seq_q_no.nextval,4,0),'sdocgoogle1','저거맛있나요');
+INSERT INTO QnA(q_no, s_no, question) VALUES('q'||lpad(seq_q_no.nextval,4,0),'smasterbeer02','뭐에여');
+INSERT INTO QnA(q_no, s_no, question) VALUES('q'||lpad(seq_q_no.nextval,4,0),'sking_data7','네');
+INSERT INTO QnA(q_no, s_no, question) VALUES('q'||lpad(seq_q_no.nextval,4,0),'s113mapping','안녕하세여~~~~');
+INSERT INTO QnA(q_no, s_no, question) VALUES('q'||lpad(seq_q_no.nextval,4,0),'s2fo2o2of2dfo1','hi~~~nicetomeetyou');
+INSERT INTO QnA(q_no, s_no, question) VALUES('q'||lpad(seq_q_no.nextval,4,0),'sda__3d_dad','네네네');
+INSERT INTO QnA(q_no, s_no, question) VALUES('q'||lpad(seq_q_no.nextval,4,0),'s_ququ555','존레전드가 엑셀의 신이래요');
+INSERT INTO QnA(q_no, s_no, question) VALUES('q'||lpad(seq_q_no.nextval,4,0),'sdaodao007','네');
+INSERT INTO QnA(q_no, s_no, question) VALUES('q'||lpad(seq_q_no.nextval,4,0),'sitsverylonglonglong','ㅎㅎㅎㅎㅎ');
+INSERT INTO QnA(q_no, s_no, question) VALUES('q'||lpad(seq_q_no.nextval,4,0),'swhe','뭐ㅓㅎ');
+
+
+
+
+
+
+
+
+INSERT INTO guestbook VALUES('g'||lpad(seq_g_no.nextval,4,0),'sdocgoogle1','m191101001','ㅎㅇ염' );
+INSERT INTO guestbook VALUES('g'||lpad(seq_g_no.nextval,4,0),'smasterbeer02','m191113002','방가방가' );
+INSERT INTO guestbook VALUES('g'||lpad(seq_g_no.nextval,4,0),'sking_data7','m191101003','안뇽~' );
+INSERT INTO guestbook VALUES('g'||lpad(seq_g_no.nextval,4,0),'s113mapping','m200102004','넹' );
+INSERT INTO guestbook VALUES('g'||lpad(seq_g_no.nextval,4,0),'s2fo2o2of2dfo1','f201102005','넹넹' );
+INSERT INTO guestbook VALUES('g'||lpad(seq_g_no.nextval,4,0),'sda__3d_dad','f190502006','네네네넨ㅇ' );
+INSERT INTO guestbook VALUES('g'||lpad(seq_g_no.nextval,4,0),'s_ququ555','m191020001','넹넹넹' );
+INSERT INTO guestbook VALUES('g'||lpad(seq_g_no.nextval,4,0),'sdaodao007','m191202002','HEY' );
+INSERT INTO guestbook VALUES('g'||lpad(seq_g_no.nextval,4,0),'sitsverylonglonglong','m191222003','YOU' );
+INSERT INTO guestbook VALUES('g'||lpad(seq_g_no.nextval,4,0),'swhe','f191104004','HI' );
+INSERT INTO guestbook VALUES('g'||lpad(seq_g_no.nextval,4,0),'swhe','m191101001','퇴근하자~' );

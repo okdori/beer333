@@ -1,0 +1,13 @@
+conn sys as sysdba/admin1234;
+
+drop user beeradmin cascade;
+
+create user beeradmin identified by 1234;
+
+grant CREATE SESSION, ALTER SESSION, CREATE DATABASE LINK, -
+  CREATE MATERIALIZED VIEW, CREATE PROCEDURE, CREATE PUBLIC SYNONYM, -
+  CREATE ROLE, CREATE SEQUENCE, CREATE SYNONYM, CREATE TABLE, - 
+  CREATE TRIGGER, CREATE TYPE, CREATE VIEW, UNLIMITED TABLESPACE -
+  to beeradmin;
+
+conn beeradmin/1234;
