@@ -29,4 +29,15 @@ public interface SQL {
 	
 	// Review
 	static final String REVIEW_SEARCH = "{call reviewsearch(?, ?)}";
+	
+	//Beer
+	//∏∆¡÷ ªË¡¶
+	static final String BEER_DELETE = "delete from beer where b_no=?";
+	//∏∆¡÷ ºˆ¡§
+	static final String BEER_UPDATE = "update beer set bname=?,AVU=?,type=?,SRM=?,IBU=?,aroma=?,photo=?,br_name=? where b_no=?";
+	//∏∆¡÷ √ﬂ∞°
+	static final String	BEER_INSERT = "insert into beer values('b'||lpad(seq_b_no.nextval,4,0),?,?,?,?,?,?,?,?)";
+	//∏∆¡÷¡∂»∏  _ procedure = beerfilter
+	static final String BEER_FILTER = " {call beerfilter(?,?,?,?,?,?)}";
+	
 }

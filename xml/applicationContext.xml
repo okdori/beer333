@@ -34,4 +34,8 @@
 	<bean id="review" class="com.beer.dao.review.ReviewDaoImpl">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
+	
+	<bean id = "beer" class = "com.beer.dao.beer.BeerDaoImpl">
+		<property name="dataSource" ref = "dataSource"/>
+	</bean>
 </beans>
