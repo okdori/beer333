@@ -6,7 +6,7 @@ import java.util.Map;
 import com.beer.vo.member.MemberVo;
 
 public interface MemberDao {
-
+//ggjgjjfjgjfjdf
 	public void memberAll();
 	public int memberDelete(String m_no);
 	public int memberUpdate(String tel, String addr, String email, String job, String m_no);
