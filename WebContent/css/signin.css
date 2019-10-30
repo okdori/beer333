@@ -42,3 +42,7 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+/* 
+% : img src를 %로 주면 딱 지정한 만큼만 이미지가 들어간다 
+px : img src를 px로 주면 지정한 이미지크기 만큼 자동조정
+*/ 

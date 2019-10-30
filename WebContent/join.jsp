@@ -1,18 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!doctype html>
 <html lang="ko">
   <head>
-    <meta charset="utf-8">
+    <meta charset="EUC-KR">
 
-    <title>Join</title>
+    <title>Index</title>
 
  <!-- core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
- <!-- М∙╢К▀╧ М▄▄Л²╪Л²≤ CSS -->
+ 
+ <!-- гь╢Г фдюоюг CSS -->
     <link href="/view/checkout/form-validation.css" rel="stylesheet">
-  <!-- Л┐│К▀╗ К╟■ -->
+ 
+ <!-- ╩С╢э ╧ы -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand h3 font-italic" href="index_re.html">Beer Stroage
+      <a class="navbar-brand h3 font-italic" href="index.html">Beer Stroage
 
 </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,84 +25,81 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="show.html">К╖╔Лё╪КЁ╢Й╦╟
+            <a class="nav-link" href="show.jsp">╦фаж╨╦╠Б
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="compare.html">К╖╔Лё╪К╧└Й╣░</a>
+            <a class="nav-link" href="compare.jsp">╦фаж╨Я╠Ё</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="rank.html">К╖╔Лё╪К·╜М┌╧</a>
+            <a class="nav-link" href="rank.jsp">╦фаж╥╘е╥</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="map.html">К┌╢Лё╪КЁ─ К╖╔Лё╪К╖⌡Л╖▒</a>
+            <a class="nav-link" href="map.jsp">Ё╩аж╨╞ ╦фаж╦юаЩ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="brew.html">Л╖─Л≈╜КЁ└ К╖╔Лё╪</a>
+            <a class="nav-link" href="brew.jsp">аЖ©╙╨╟ ╦фаж</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link font-weight-bold font-italic" href="login.html">LogIn</a>
+            <a class="nav-link font-weight-bold font-italic" href="login.jsp">LogIn</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link font-weight-bold font-italic" href="join.html">Join</a>
+            <a class="nav-link font-weight-bold font-italic" href="join.jsp">Join</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <!-- Л┐│К▀╗ К╟■ К│² -->
-
+ </head>
+  <!-- ╩С╢э ╧ы Ё║ -->
 
 
 
 <div style ="margin:70px; padding:2px; font-weight:bold;">
     <div class="container">
-      <h1>М ▄Л⌡░ Й╟─Л·┘</h1>
+      <h1>х╦©Ь ╟║ют</h1>
     </div>
     <div style="padding:10px;">
 
       <form class="needs-validation " novalidate>
         <div class="col-md-4 mb-3">
-          <label for="id">idК╔╪ Л·┘К═╔М∙≤Л└╦Л ■</label>
-          <input type="text" class="form-control" id="id" placeholder="Л≤│К╛╦Л°╪К║° Й╦╟Л·╛М∙╢ Лё╪Л└╦Л ■" value="" required>
+          <label for="id">id╦╕ ют╥бго╪╪©Д</label>
+          <input type="text" class="form-control" id="id" placeholder="©╣╧╝ю╦╥н ╠БюГгь аж╪╪©Д" value="" required>
           </div>
 
           <div class="col-md-4 mb-3">
-            <label for="pw">pwК╔╪ Л·┘К═╔М∙≤Л└╦Л ■</label>
-            <input type="text" class="form-control" id="pw" placeholder="Л≤│К╛╦, Л┬╚Л·░ М≤╪Л ╘ Й╦╟Л·┘ Й╟─К┼╔" value="" required>
+            <label for="pw">pw╦╕ ют╥бго╪╪©Д</label>
+            <input type="text" class="form-control" id="pw" placeholder="©╣╧╝, ╪Щюз х╔©К ╠Бют ╟║╢и" value="" required>
             </div>
 
             <div class="col-md-4 mb-3">
-              <label for="pw">pw М≥∙Л²╦</label>
-              <input type="text" class="form-control" id="pw" placeholder="К╧└К╟─К╡┬М≤╦ М≥∙Л²╦" value="" required>
+              <label for="pw">pw х╝юн</label>
+              <input type="text" class="form-control" id="pw" placeholder="╨Я╧п╧Ьхё х╝юн" value="" required>
             </div>
             <div class="col-md-4 mb-3">
-              <button class="btn btn-secondary" type="submit">М≥∙Л²╦</button>
+              <button class="btn btn-secondary" type="submit">х╝юн</button>
               </div>
-
-
-
 
         </div>
 
   <div class="col-md-4 mb-3">
-            <label for="name">Л²╢К╕└Л²└ Л·┘К═╔М∙≤Л└╦Л ■</label>
-            <input type="text" class="form-control" id="name" placeholder="М≥█Й╦╦К▐≥" value="" required>
+            <label for="name">юл╦╖ю╩ ют╥бго╪╪©Д</label>
+            <input type="text" class="form-control" id="name" placeholder="х╚╠Ф╣©" value="" required>
             </div>
 
 
 
    <div class="container">
   <div class="col-md-4 mb-3">
-<label for="sex">Л└╠КЁ└Л²└ Л·┘К═╔М∙≤Л└╦Л ■<span class="text-muted"></span></label>
+<label for="sex">╪╨╨╟ю╩ ют╥бго╪╪©Д<span class="text-muted"></span></label>
    <span class="col-md-4 mb-3 custom-radio">
             <input id="sex_m" name="sexMethod" type="radio" class="custom-control-input" checked required>
-            <label class="col-md-8 custom-control-label" for="male">К┌╗</label>
+            <label class="col-md-8 custom-control-label" for="male">Ё╡</label>
           </span>
          <span class="col-md-4 mb-3 custom-radio">
             <input id="sex_f" name="sexMethod" type="radio" class="custom-control-input" required>
-            <label class="col-md-8 custom-control-label" for="female">Л≈╛</label>
+            <label class="col-md-8 custom-control-label" for="female">©╘</label>
          <span> </div>
             </div>
 <div style="padding:5px;"/>
@@ -106,10 +107,10 @@
 
 
 <div class="col-md-4 mb-3">
-          <label for="email">Л┐²К┘└Л⌡■Л²╪<span class="text-muted"></span></label>
+          <label for="email">╩ЩЁБ©Ыюо<span class="text-muted"></span></label>
           <input type="birthday" class="form-control" id="birthday" placeholder="ex)991203">
             <span class="invalid-feedback" style="width: 100%;">
-              М∙≤Л²╢М■┬ Л≈├Л²╢ Й╦╟Л·╛М∙╢ Лё╪Л└╦Л ■.
+              гоюлгб ╬Ьюл ╠БюГгь аж╪╪©Д.
           </div>
 <div style="padding:5px;"/>
 
@@ -120,8 +121,8 @@
 <div style="padding:5px;"/>
 
 <div class="col-md-4 mb-3">
-          <label for="address">Лё╪Л├▄</label>
-          <input type="text" class="form-control" id="address" placeholder="Л└°Л ╦Л▀° Л╒┘К║°Й╣╛ М ╗Л·░К▐≥" required>
+          <label for="address">аж╪р</label>
+          <input type="text" class="form-control" id="address" placeholder="╪╜©О╫ц а╬╥н╠╦ х©юз╣©" required>
         </div>
  <div style="padding:5px;">
 </div>
@@ -129,15 +130,15 @@
 <div class="col-md-4 mb-3">
         <div class="row">
 
-            <label for="country">Л╖│Л≈┘</label>
+            <label for="country">аВ╬В</label>
             <select class="custom-select d-block w-100" id="job" required>
-              <option value="">Л└═М┐²</option>
-              <option>М∙≥Л┐²</option>
-	 <option>М■└К╕╛К·°Л└°</option>
+              <option value="">╪╠ец</option>
+              <option>гп╩Щ</option>
+	 <option>га╦╝╥ё╪╜</option>
 	 <option>IT</option>
-	 <option>Л·░Л≤│Л≈┘</option>
-	 <option>К■■Л·░Л²╦</option>
-	 <option>Й╦╟М┐─</option>
+	 <option>юз©╣╬В</option>
+	 <option>╣Пюзюн</option>
+	 <option>╠Бе╦</option>
            </select>
           </div>
           </div>
@@ -145,6 +146,6 @@
 
       </form>
 
-   <button class="btn btn-warning" type="submit">Й╟─Л·┘ Л≥└Кё▄</button>
+   <button class="btn btn-warning" type="submit">╟║ют ©о╥А</button>
   </body>
 </html>
