@@ -1,0 +1,120 @@
+# 매개인자로 크롤링하고 싶은 페이지 수
+def source_crawler(page):
+    # 필요한 라이브러리 임포트
+    from bs4 import BeautifulSoup
+    from urllib.request import urlopen, Request
+
+    from selenium import webdriver
+    from selenium.webdriver.common.keys import Keys
+
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+    from selenium.webdriver.common.by import By
+
+    from bs4 import BeautifulSoup
+    import time
+    
+    page = page-1
+    
+    # selenium을 이용하여 웹페이지 소스 긁어오기
+    chrome_driver = 'C:/Users/JIn/Documents/chromedriver' 
+
+    # 크롤링할 url
+    target_url = 'https://www.wine21.com/13_search/beer_list.html#List'
+
+    # 상세보기를 들어가기 위한 목록리스트 source
+    click_list=[]
+    
+    # 각 맥주의 상세보기 source
+    soup = []
+    try:
+        driver = webdriver.Chrome(chrome_driver)
+        driver.get(target_url)
+
+        #목록 수 100개 설정 
+        driver.find_element_by_xpath("//select/option[@value='100']").click()  
+
+        list_source_len=len(driver.find_elements_by_xpath('//div[@class="tit"]/h4/a'))
+        print('====================',1,"page :",list_source_len,"개",'====================')
+                
+    except:
+        print('==========',1,"page 활성화 실패==========")
+        pass
+    
+    finally:
+        driver.close()
+        
+    for j in range(list_source_len):
+        try:
+            driver = webdriver.Chrome(chrome_driver)
+            driver.get(target_url)
+
+            #목록 수 100개 설정 
+            driver.find_element_by_xpath("//select/option[@value='100']").click()    
+
+            # 상세목록 클릭
+            driver.find_elements_by_xpath('//div[@class="tit"]/h4/a')[j].click()
+
+            # 페이지소스 저장
+            src = driver.page_source
+            soup.append(BeautifulSoup(src))
+            print(1,"page :",j+1,"개 저장완료 ","현재개수 :",len(soup))
+            
+            driver.close()            
+            
+        except:
+            print('==========',j+1,"page :",j+1,"번 저장실패 ",'==========')
+        pass
+
+                  
+    for i in range(page):
+        try:
+            # 페이지 열기
+            driver = webdriver.Chrome(chrome_driver)
+            driver.get(target_url)
+        
+        
+            #목록 수 100개 설정 
+            driver.find_element_by_xpath("//select/option[@value='100']").click()    
+
+            # 페이지 전환
+            page = driver.find_elements_by_xpath('//div[@class="pagenate ver_web"]/a')
+            page[i].click()
+
+            list_source_len=len(driver.find_elements_by_xpath('//div[@class="tit"]/h4/a'))
+            print('====================',i+2,"page :",list_source_len,"개",'====================')
+            
+            driver.close()
+        except:
+            print('==========',i+2,"page 활성화 실패==========")
+            pass
+                  
+        for j in range(list_source_len):
+            try:
+                # 페이지 열기
+                driver = webdriver.Chrome(chrome_driver)
+                driver.get(target_url)
+
+        
+                # 목록 수 100개 설정 
+                driver.find_element_by_xpath("//select/option[@value='100']").click()
+
+                # 페이지 전환
+                page = driver.find_elements_by_xpath('//div[@class="pagenate ver_web"]/a')
+                page[i].click()
+
+                # 상세목록 클릭
+                driver.find_elements_by_xpath('//div[@class="tit"]/h4/a')[j].click()
+
+                # 페이지소스 저장
+                src = driver.page_source
+                soup.append(BeautifulSoup(src))
+
+                print(i+2,"page :",j+1,"개 저장완료 ","현재개수 : ",len(soup))
+                driver.close()
+          
+            except:
+                print('==========',i+2,"page :",j+1,"번 저장실패 ",'==========')
+                pass
+
+    return soup

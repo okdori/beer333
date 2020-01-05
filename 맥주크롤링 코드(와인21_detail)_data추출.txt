@@ -1,0 +1,45 @@
+# 매개인자로 source_crawler함수의 list변수를 받음
+def beer_mining(soup):
+    import pandas as pd
+
+    상품명_kor=[]
+    상품명_eng=[]
+    도수=[]
+    원재료=[]
+    홉종류=[]
+    음용온도=[]
+    IBU=[]
+    SRM=[]
+    정보=[]
+    
+    for i in range(len(soup)):
+        #맥주 데이터수집
+        source = soup[i].findAll("div",{"class":"column_detail2"})
+        상품명_kor.append(source[0].findAll("h4",{"class":"name_ko"})[0].get_text())
+        상품명_eng.append(source[0].findAll("div",{"class":"name_en"})[0].get_text())
+
+        source02 = source[0].findAll("div",{"class":"wine_info"})[0] 
+        도수.append(source02.findAll("dd")[3].get_text())
+        원재료.append(source02.findAll("dd")[4].get_text())
+        tmp=source02.findAll("dd")[5].get_text()
+        홉종류.append(tmp.replace('\n',''))
+        음용온도.append(source02.findAll("dd")[6].get_text())
+        tmp=source02.findAll("dd")[7].get_text()
+        IBU.append(tmp.replace('\xa0',''))
+        SRM.append(source02.findAll("dd")[8].get_text()[0])
+
+        #맥주정보 전처리 후 저장
+        source03 =soup[i].findAll("div",{"class":"column_detail3"})
+        try :
+            info = source03[0].findAll('div',{'id':'MakerNote_wrap'})[0].get_text()
+            thing = source03[0].findAll('span',{'class':'red'})[0].get_text()
+            #info에서 thing이 들은 문자열 제거
+            info=info.replace(thing,'')
+        except:
+            pass
+        info=info.replace('\n','')    
+        정보.append(info)
+        
+    return pd.DataFrame(
+        data = {"상품명_kor":상품명_kor,"상품명_eng":상품명_eng,"도수":도수,"원재료":원재료,"홉종류":홉종류,"음용온도":음용온도,"IBU":IBU,"SRM":SRM,"정보":정보}
+    )
