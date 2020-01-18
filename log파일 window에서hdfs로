@@ -1,0 +1,18 @@
+**2020년 01월 18일 (토) 오전 01시 40분 42초 
+
+1. eclipse에서 로그파일을 생성하면 flume을 통하여 리눅스의 hdfs로 파일을 적재시켰다.
+ - log파일 저장위치는  c드라이브/logs/logback
+   -   공유폴더로 logback 파일을 설정하였다.
+ - hdfs로 적재된 뒤에는 바로 로그파일이 삭제된다. 
+
+2. flume/conf의 속성에 관해서는..
+ - flume의 설정파일 중에 spoolDir는 파일을 당겨오는 위치
+ - Sink.type은 저장하는 위치의 타입
+ - hdfs.path는 hdfs의 저장할 경로를 의미한다. 
+ - SpoolSource의 deletePolicy를 통하여 로그파일을 바로 삭제할 수 있다.
+
+3. windows-linux 간 공유폴더인 sf_logback의 경로는 /media/sf_logback이다.
+
+4. flume 실행 명령어
+flume-ng agent -c conf -f /home/hadoop/flume/conf/beer_log.conf -n Test_Agent
+
